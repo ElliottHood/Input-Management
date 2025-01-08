@@ -1,0 +1,22 @@
+{
+    "name": "com.shellter.input-management",
+    "version": "1.0.0",
+    "displayName": "Input Management",
+    "description": "An extension of the Unity Input system with one-line input buffering and switching input control between systems",
+    "unity": "2022.3.44f1",
+    "author": {
+      "name": "Elliott Hood",
+      "email": "elliotthood0@gmail.com",
+      "url": "https://elliott-hood.com"
+    },
+    "dependencies": {
+        "com.unity.inputsystem": "1.7.0"
+    },
+    "samples": [
+      {
+        "displayName": "Demo",
+        "description": "A sample scene with examples of charge buffering, jump buffering, double tap gestures, and higher priority inputs",
+        "path": "Samples~/Sample Scene"
+      }
+    ]
+}  
