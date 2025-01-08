@@ -93,7 +93,7 @@ public abstract class InputListener : MonoBehaviour, IPriorityGroupable
 
     public bool GetRetrievable()
     {
-        return enabled && gameObject.activeInHierarchy;
+        return enabled && gameObject != null && gameObject.activeInHierarchy;
     }
 
     #endregion
