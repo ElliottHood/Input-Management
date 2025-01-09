@@ -17,6 +17,7 @@ An extension of Unity's new Input System that allows for easy integration of scr
 ## References
 
 - Inspired by Aarthificial: 
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/pOEyYwKtHJo/0.jpg)](https://www.youtube.com/watch?v=pOEyYwKtHJo)
 
 ## Dependencies
