@@ -19,7 +19,7 @@ namespace InputManagement
         protected override void InterceptInput()
         {
             // This is just an example of how to implement a buffered input
-            if (buttonInputProvider.TryUseBuffer())
+            if (buttonInputProvider.TryUseBuffer(priority))
             {
                 ResolveInput();
             }
