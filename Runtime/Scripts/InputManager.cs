@@ -29,7 +29,7 @@ namespace InputManagement
 
         #region PlayerInput
 
-        private PlayerInput playerInput;
+        public PlayerInput PlayerInput { get; private set; }
 
         private void OnValidate()
         {
@@ -43,12 +43,12 @@ namespace InputManagement
 
         public void Enable()
         {
-            playerInput.enabled = true;
+            PlayerInput.enabled = true;
         }
 
         public void Disable()
         {
-            playerInput.enabled = false;
+            PlayerInput.enabled = false;
         }
 
         #endregion
@@ -62,7 +62,7 @@ namespace InputManagement
 
         private void Awake()
         {
-            playerInput = GetComponent<PlayerInput>();
+            PlayerInput = GetComponent<PlayerInput>();
 
             if (isSingleton)
             {
@@ -101,12 +101,12 @@ namespace InputManagement
             switch (inputMode)
             {
                 case InputMode.Player:
-                    playerInput.SwitchCurrentActionMap(PLAYER_ACTION_MAP);
+                    PlayerInput.SwitchCurrentActionMap(PLAYER_ACTION_MAP);
                     Cursor.visible = false;
                     Cursor.lockState = CursorLockMode.Locked;
                     break;
                 case InputMode.UI:
-                    playerInput.SwitchCurrentActionMap(UI_ACTION_MAP);
+                    PlayerInput.SwitchCurrentActionMap(UI_ACTION_MAP);
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
                     break;
