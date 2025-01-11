@@ -5,13 +5,12 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// Prevents a bug with XInput and controllers, in which multiple players get spawned and controlled by one controller
 /// </summary>
+[RequireComponent(typeof(PlayerInputManager))]
 public class RemoveXInputGamepads : MonoBehaviour
 {
-    [SerializeField] private PlayerInputManager _playerInputManager;
-
-    private void Start()
+    private void Awake()
     {
-        _playerInputManager.onPlayerJoined += _playerInputManager_onPlayerJoined;
+        GetComponent<PlayerInputManager>().onPlayerJoined += _playerInputManager_onPlayerJoined;
     }
 
     private void _playerInputManager_onPlayerJoined(PlayerInput obj)

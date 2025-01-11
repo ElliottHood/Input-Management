@@ -33,7 +33,6 @@ public abstract class InputListener : MonoBehaviour, IPriorityGroupable
 
             if (active)
             {
-                print($"{gameObject} is active");
                 StopAllCoroutines();
                 StartCoroutine(InterceptInputCoroutine());
 
