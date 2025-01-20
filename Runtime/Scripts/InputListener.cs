@@ -69,8 +69,8 @@ public abstract class InputListener : MonoBehaviour, IPriorityGroupable
     {
         while (Active)
         {
-            InterceptInput();
             yield return null;
+            InterceptInput();
         }
     }
 
